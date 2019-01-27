@@ -1,0 +1,58 @@
+.panel
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: $border-small $panel-color;
+    border-radius: $panel-border-radius;
+    overflow: hidden;
+
+    &-header
+    {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        color: get-color(foreground);
+        font-weight: $font-bold;
+        padding: 1rem;
+        border-bottom: $border-small $panel-color;
+
+        &-title
+        {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-grow: 1;
+            color: get-color(foreground);
+            font-weight: $font-bold;
+        }
+
+        &-button
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-left: 1rem;
+            border-left: $border-small $panel-color;
+            cursor: pointer;
+        }
+    }
+
+    &-content
+    {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $panel-content-padding;
+    }
+
+    &-footer
+    {
+        display: flex;
+        align-items: stretch;
+        padding: .5rem 1rem;
+        font-size: $font-size-small;
+        border-top: $border-small $panel-color;
+    }
+}

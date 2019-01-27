@@ -1,0 +1,57 @@
+.comment
+{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+
+    &-header
+    {
+        display: flex;
+        flex-direction: column;
+
+        &-author
+        {
+            font-weight: $font-bold;
+        }
+
+        &-meta
+        {
+            color: #CDD7D6;
+        }
+    }
+
+    &-body
+    {
+        /*display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;*/
+        word-wrap: break-word;
+    }
+
+    &-actions
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .comments
+    {
+        padding-left: rem(20px);
+        border-left: rem(1px) dashed #CDD7D6;
+
+        .comment + .comment
+        {
+            padding-top: rem(10px);
+            border-top: rem(1px) dashed #CDD7D6;
+        }
+    }
+}
+
+.comment + .comment, .comment > .comments, .comments + .comment
+{
+    margin-top: rem(10px);
+}

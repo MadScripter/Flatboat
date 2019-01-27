@@ -1,0 +1,33 @@
+@function get-color($color)
+{
+    @return map-get($colors, $color);
+}
+
+@function get-variant-color($color)
+{
+    @return map-get($variant-colors, $color);
+}
+
+@function get-shadow($shadow-object)
+{
+    @return map-get($shadow-object, x) 
+            map-get($shadow-object, y)
+            map-get($shadow-object, blur)
+            map-get($shadow-object, spread)
+            map-get($shadow-object, color);
+}
+
+@function rem($pixels, $context: 16px)
+{
+    @if (unitless($pixels))
+    {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context))
+    {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}

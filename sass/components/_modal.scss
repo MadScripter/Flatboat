@@ -1,0 +1,59 @@
+.modal-overlay, .modal-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-overlay
+{
+    background-color: rgba(#000000, 0.6);
+    z-index: map-get($z-indexes, modal-overlay);
+}
+
+.modal-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: map-get($z-indexes, modal-container);
+}
+
+.modal
+{
+    position: relative;
+    background-color: #FFFFFF;
+    width: 50%;
+    padding: 1rem;
+    border-radius: $border-radius-small;
+    pointer-events: auto;
+    z-index: map-get($z-indexes, modal);
+
+    &-show
+    {
+
+    }
+
+    &-header
+    {
+        &-close
+        {
+
+        }
+    }
+
+    &-content
+    {
+
+    }
+
+    &-footer
+    {
+        
+    }
+    //make it responsive (full screen)
+}

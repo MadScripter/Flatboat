@@ -1,0 +1,97 @@
+.font-normal
+{
+    font-weight: $font-weight-base !important;
+}
+
+.font-medium
+{
+    font-weight: $font-medium !important;
+}
+
+.font-bold
+{
+    font-weight: $font-bold !important;
+}
+
+.font-black
+{
+    font-weight: $font-black !important;
+}
+
+.font-italic
+{
+    font-style: italic !important;
+}
+
+.font-xsmall
+{
+    font-size: $font-size-xsmall !important;
+}
+
+.font-small
+{
+    font-size: $font-size-small !important;
+}
+
+.font-large
+{
+    font-size: $font-size-large !important;
+}
+
+.text-lowercase
+{
+    text-transform: lowercase !important;
+}
+
+.text-capitalize
+{
+    text-transform: capitalize !important;
+}
+
+.text-uppercase
+{
+    text-transform: uppercase !important;
+}
+
+.text-left
+{
+    text-align: left !important;
+}
+
+.text-center
+{
+    text-align: center !important;
+}
+
+.text-right
+{
+    text-align: right !important;
+}
+
+.text-justify
+{
+    text-align: justify !important;
+}
+
+.text-nowrap
+{
+    white-space: nowrap !important;
+}
+
+@each $variant, $color in $variant-colors
+{
+    .text-#{$variant}
+    {
+        color: $color !important;
+    }
+}
+
+.text-white
+{
+    color: #FFFFFF !important;
+}
+
+.text-black
+{
+    color: #000000 !important;
+}

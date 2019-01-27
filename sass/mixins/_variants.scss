@@ -1,0 +1,83 @@
+@mixin create-variants($element, $hover: true)
+{
+    @each $variant, $color in $variant-colors
+    {
+        &.#{$element}-#{$variant}
+        {
+            background-color: $color;
+
+            color: if($variant == light, get-color(foreground), #FFFFFF);
+
+            //mix-blend-mode: difference;
+
+            @if($hover)
+            {
+                &:hover
+                {
+                    background-color: lighten($color, 5%);
+                }
+
+                &:active, &:focus
+                {
+                    background-color: darken($color, 5%);
+                }
+            }
+        }
+    }
+}
+
+@mixin create-outline-variants($element)
+{
+    @each $variant, $color in $variant-colors
+    {
+        &.#{$element}-outline-#{$variant}
+        {
+            background-color: transparent;
+            color: $color;
+            border-color: $color;
+
+            &:hover 
+            {
+                background-color: $color;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+@mixin create-input-variants($element)
+{
+    @each $variant, $color in $variant-colors
+    {
+        #{$element}-#{$variant}
+        {
+            border-color: $color;
+
+            &:focus, &:active
+            {
+                border-color: $color;
+            }
+        }
+    }
+}
+
+@mixin create-alert-variants($alert)
+{
+    @each $variant, $color in $variant-colors
+    {
+        #{$alert}-#{$variant}
+        {
+            background-color: $color;
+
+            color: if($variant == light, get-color(foreground), #FFFFFF);
+            
+            #{$alert}-close
+            {
+                &:before, &:after
+                {
+                    border-color: if($variant == light, get-color(foreground), $color);
+                }
+            }
+        }
+    }
+}

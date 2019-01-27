@@ -1,0 +1,140 @@
+form
+{
+    .form-group
+    {
+        //&:not(::nth-last-child)
+        //{
+            margin-bottom: 1rem;
+        //}
+
+        label
+        {
+            display: inline-flex;
+            margin-bottom: .5rem;
+            white-space: nowrap;
+        }
+
+        .form-help
+        {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            margin-top: .5rem;
+            color: get-color(foreground-light);
+            font-size: $font-size-small;
+        }
+
+        &-inline
+        {
+            display: inline-flex;
+
+            label
+            {
+                justify-content: center;
+                align-items: center;
+                margin-right: .5rem;
+                margin-bottom: 0;
+            }
+
+            .form-help
+            {
+                justify-content: center;
+                align-items: center;
+                margin-top: 0;
+                margin-left: .5rem;
+            }
+        }
+    }
+
+    //General control style
+    .form-element
+    {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        padding: .75rem 1rem;
+        border: $border-small get-color(light-gray);
+        border-radius: $border-radius-small;
+
+        &:focus, &.is-focused, &:active, &.is-active
+        {
+            border-color: get-variant-color(primary);
+            outline: none;
+        }
+
+        &[disabled], &[readonly]
+        {
+            cursor: not-allowed
+        }
+
+        @at-root
+        {
+            @include create-input-variants(&);
+        }
+    }
+
+    .form-element-group
+    {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+
+        .form-element-addon
+        {
+            &-text
+            {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: get-color(light-gray);
+                padding: 0 1rem;
+                color: darken(get-color(light-gray), 40%);
+                border-radius: $border-radius-small;
+            }
+
+            &:first-child:not(:last-child)
+            {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &:not(:first-child):not(:last-child)
+            {
+                border-radius: 0;
+            }
+
+            &:last-child
+            {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .form-element
+        {
+            &:not(:first-child)
+            {
+                //border-left: none;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &:not(:last-child)
+            {
+                //border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+    //File
+    .form-file
+    {
+
+    }
+
+    //Checkbox, Radio
+}

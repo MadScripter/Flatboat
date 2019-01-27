@@ -1,0 +1,69 @@
+.button
+{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    padding: $padding-y $padding-x;
+    line-height: $line-height-small;
+    border: $border transparent;
+    border-radius: $border-radius-small;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .2s all;
+
+    &-block
+    {
+        width: 100%;
+
+        & + &
+        {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &-half-block
+    {
+        width: 50%;
+    }
+
+    &.is-round
+    {
+        border-radius: rem(56px);
+    }
+    
+    &-icon
+    {   
+        flex: 1;
+        padding: 0.5rem 0.75rem;
+    }
+
+    @include create-sizes();
+    @include create-variants(button);
+    @include create-outline-variants(button);
+}
+
+.button-group
+{
+    position: relative;
+    display: inline-flex;
+    
+    > .button
+    {
+        &:first-child:not(:last-child)
+        {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:not(:first-child):not(:last-child)
+        {
+            border-radius: 0;
+        }
+
+        &:last-child
+        {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}

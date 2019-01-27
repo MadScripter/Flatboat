@@ -1,0 +1,14 @@
+.badge
+{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: .05rem .5rem;
+    font-size: 75%;
+    border: $border-small transparent;
+    border-radius: $badge-border-radius;
+
+    @include create-variants(badge, false);
+}

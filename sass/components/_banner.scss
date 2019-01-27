@@ -1,0 +1,43 @@
+.banner
+{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    background-image: linear-gradient(135deg, $banner-gradientA 0%, $banner-gradientB 100%);
+    width: 100%;
+    max-width: 100%;
+    margin: $banner-margin;
+    padding: $banner-padding;
+    border-radius: $banner-border-radius;
+
+    &-item
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 1;
+        color: $banner-text-color;
+    }
+
+    &-button
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $banner-button-background;
+        padding: $banner-button-padding;
+        color: $banner-button-text-color;
+        font-weight: $banner-button-font-weight;
+        line-height: $banner-button-line-height;
+        border-radius: $banner-button-border-radius;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: .2s all;
+
+        &:hover, &:focus, &:active
+        {
+            background-color: lighten($banner-button-background, 20%);
+        }
+    }
+}

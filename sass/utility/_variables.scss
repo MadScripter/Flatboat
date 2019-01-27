@@ -1,0 +1,289 @@
+//Colors
+//payne's grey: #5D737E
+//green sheen: #64B6AC
+//darker light gray: #CDD7D6
+//haya blue: #69DDFF
+//teal deer: #96E6B3
+//french sky blue: #65AFFF
+
+//========================================
+// C O L O R S
+//========================================
+
+$colors:
+(
+    yankees:    #25283D,
+    deepspace:  #415A77,
+    light-gray: #DCDCDC,//#C9CAD9,//#F1F1F1,
+
+    background: #FFFFFF,
+    foreground: #25283D,
+    foreground-light: #415A77
+) !default;
+
+$variant-colors:
+(
+    primary:   #3670FB,//#4171E3,
+    secondary: #25283D,//#CDD7D6,
+    light:     #ECF2FE,
+    info:      #5FBFF9,
+    success:   #16BAC5,
+    error:     #E24141
+) !default;
+
+$link-color: get-variant-color(primary) !default;
+
+//========================================
+// T Y P O G R A P H Y
+//========================================
+
+$font-family: 'Roboto', sans-serif !default;
+
+$font-size-xsmall: rem(12px) !default;
+$font-size-small:  rem(14px) !default;
+$font-size-base:   rem(16px) !default;
+$font-size-large:  rem(18px) !default;
+
+$font-weight-base: 400 !default;
+$font-medium:      500 !default;
+$font-bold:        600 !default;
+$font-black:       900 !default;
+
+$render-mode: optimizeLegibility !default;
+
+//========================================
+// B A S E
+//========================================
+
+$line-height-base:  1.5  !default;
+$line-height-small: 1.25 !default;
+
+$rem-base:         $font-size-base;
+$rem-base-half:    $font-size-base / 2;
+$rem-base-quarter: ($font-size-base / 2) / 2;
+
+$z-indexes:
+(
+    dropdown: 1000,
+    modal-overlay: 1010,
+    modal-container: 1020,
+    modal: 1030
+) !default;
+
+//========================================
+// B O R D E R S
+//========================================
+
+$border:       rem(2px) solid !default;
+$border-small: rem(1px) solid !default;
+
+$border-radius:       rem(5px)  !default;
+$border-radius-small: rem(3px)  !default;
+$border-radius-round: rem(56px) !default;
+
+//========================================
+// S P A C I N G
+//========================================
+
+$spacing-base: ($rem-base / 2) !default;
+
+$spaces:
+(
+    xs: rem($spacing-base * 3),
+    sm: rem($spacing-base * 4), 
+    md: rem($spacing-base * 5),
+    lg: rem($spacing-base * 6),
+) !default;
+
+$padding-x: $rem-base      !default;
+$padding-y: $rem-base-half !default;
+
+$padding-sizes:
+(
+    small: $padding-y / 2 $padding-x / 2,
+    large: $padding-y * 1.5 $padding-x * 1.5,
+) !default;
+
+//========================================
+//======= [ C O M P O N E N T S ] ========
+//========================================
+// A L E R T S
+//========================================
+
+$alert-padding: 1.25rem 2.5rem 1.25rem 1.5rem; 
+$alert-border-radius: $border-radius-small;
+
+$alert-color: #FFFFFF;
+
+//========================================
+// B A D G E S
+//========================================
+
+$badge-padding: .05rem .5rem;
+$badge-border-radius: $border-radius-small;
+
+//========================================
+// B A N N E R S
+//========================================
+
+$banner-gradientA: get-variant-color(info); //#FFF6B7;
+$banner-gradientB: get-variant-color(success); //#F6416C;
+$banner-text-color: get-color(foreground);
+
+$banner-margin: 1rem 0;
+$banner-padding: 1rem;
+$banner-border-radius: $border-radius;
+
+$banner-button-background: rgba(#000, 0.3);
+$banner-button-padding: $padding-y ($padding-x * 1.5);
+$banner-button-text-color: #FFFFFF;
+$banner-button-font-weight: $font-medium;
+$banner-button-line-height: $line-height-small;
+$banner-button-border-radius: rem(56px);
+
+//========================================
+// B U T T O N S
+//========================================
+
+//========================================
+// C A R D S
+//========================================
+
+$card-header-padding: 1rem /*1.5rem*/;
+//$card-content-padding: 0 1.5rem 1rem;
+$card-content-padding: 1rem;
+$card-footer-item-padding: .75rem;
+
+$card-shadow:
+(
+    x: 0,
+    y: rem(1px),
+    blur: rem(2px),
+    spread: 0,
+    color: rgba(#000000, .2)
+) !default;
+
+//========================================
+// C O M M E N T S
+//========================================
+
+$comment-padding-left: rem(20px);
+$comment-padding-top: rem(10px);
+$comment-margin-top: $comment-padding-top;
+
+$comment-meta-color: #CDD7D6;
+
+//========================================
+// D R O P D O W N
+//========================================
+
+$dropdown-background: get-color(background);
+
+$dropdown-padding: .5rem 0;
+
+$dropdown-margin: .125rem 0;
+
+$dropdown-header-padding: .5rem 1.5rem;
+$dropdown-header-color: get-variant-color(secondary);
+
+$dropdown-item-color: get-color(foreground);
+$dropdown-item-hover: get-color(light-gray);
+
+$dropdown-icon-margin: inherit rem(5px) inherit inherit;
+$dropdown-icon-size: $font-size-base;
+
+//========================================
+// F O R M S
+//========================================
+
+$input-padding: .75rem 1rem;
+$input-border: $border-small get-color(light-gray);
+$input-border-radius: $border-radius-small;
+
+//========================================
+// I M A G E S
+//========================================
+
+//========================================
+// M E N U
+//========================================
+
+$menu-item-padding: $padding-y $padding-x;
+
+$menu-item-color: get-color(foreground);
+$menu-item-border-left: rem(4px) solid get-color(light-gray);
+
+$menu-icon-margin: inherit rem(10px) inherit inherit;
+
+$menu-item-border:
+(
+    side: 'left',
+    width: rem(4px),
+    style: solid,
+    color: get-color(light-gray)
+) !default;
+
+//========================================
+// M E S S A G E S
+//========================================
+
+//========================================
+// M O D A L S
+//========================================
+
+//========================================
+// N A V I G A T I O N
+//========================================
+
+$nav-background: get-color(background);
+$nav-min-height: rem(56px);
+$nav-margin: inherit inherit rem(50px) inherit;
+
+$nav-item-font-size: $font-size-xsmall;
+$nav-item-font-weight: $font-medium;
+
+$nav-border:
+(
+    side: 'bottom',
+    width: rem(1px),
+    style: solid,
+    color: rgba(#000000, .05)
+) !default;
+
+//========================================
+// P A G I N A T I O N
+//========================================
+
+//========================================
+// P A N E L
+//========================================
+
+$panel-color: get-color(light-gray);
+$panel-border-radius: $border-radius-small;
+
+$panel-header-padding: $padding-y $padding-x;
+$panel-content-padding: ($padding-y * 2) $padding-x;
+
+//========================================
+// P R O G R E S S
+//========================================
+
+//========================================
+// T A B L E S
+//========================================
+
+$table-border: $border-small get-color(light-gray);
+$table-border-radius: $border-radius-small;
+
+$table-stripped-color: get-color(light-gray);
+$table-hover-color: lighten(get-color(light-gray), 10%);
+
+$table-cell-padding: .75rem;
+
+//========================================
+// T A B S
+//========================================
+
+//========================================
+// T O O L T I P S
+//========================================

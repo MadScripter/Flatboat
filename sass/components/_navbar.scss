@@ -1,0 +1,94 @@
+.navbar
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: get-color(background);
+    margin-bottom: 50px;
+    min-height: 56px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &-transparent
+    {
+        background-color: transparent;
+    }
+
+    > .container
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-brand
+    {
+        display: inline-flex;
+
+        &:after
+        {
+            display: flex;
+            content: '';
+            height: 60%;
+            width: rem(1px);
+            background-color: get-color(foreground);
+        }
+    }
+
+    .navbar-section
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-item
+    {
+        display: inline-flex;
+        // padding: 5px 15px;
+        color: get-color(foreground);
+        font-size: 12px; // 0.8571em;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:not(.is-bordered)
+        {
+            border-bottom: 2px solid transparent;
+        }
+
+        &:not(.is-selected):not(.is-bordered):hover
+        {
+            border-bottom: 2px solid get-color(light-gray);
+        }
+
+        &.is-selected
+        {
+            color: get-variant-color(primary);
+            border-bottom: 2px solid get-variant-color(primary);
+        }
+
+        &.is-bordered
+        {
+            border: 2px solid get-color(foreground);
+            border-radius: $border-radius-small;
+            padding: 5px 15px;
+            transition: .2s all;
+
+            &:hover, &:focus, &:active
+            {
+                color: get-variant-color(primary);
+                border-color: get-variant-color(primary);
+            }
+        }
+
+    }
+
+    .navbar-item + .navbar-item, 
+    .navbar-item + .dropdown-container, 
+    .dropdown-container + .navbar-item,
+    .dropdown-container + .dropdown-container
+    {
+        margin-left: rem(25px);
+    }
+}

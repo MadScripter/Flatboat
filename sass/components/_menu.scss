@@ -1,0 +1,54 @@
+.menu
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+
+    .menu-item
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: $padding-y $padding-x;
+        color: get-color(foreground);
+        font-weight: $font-bold;
+        border-left: rem(4px) solid get-color(light-gray);
+        cursor: pointer;
+        transition: .2s all;
+
+        > i
+        {
+            margin-right: rem(10px);
+        }
+
+        &.selected
+        {
+            color: get-variant-color(primary);
+            border-color: get-variant-color(primary);
+
+            > .badge
+            {
+                background-color: get-variant-color(primary);
+            }
+        }
+
+        &:hover:not(.selected)
+        {
+            //background-color: get-color(light-gray);
+            border-color: get-color(foreground);
+        }
+
+        > .badge
+        {
+            background-color: get-color(foreground);
+            justify-content: flex-end;
+            margin-left: auto;
+        }
+    }
+
+    .menu-item + .menu-item
+    {
+        margin-top: rem(5px);
+    }
+}

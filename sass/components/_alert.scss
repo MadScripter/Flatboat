@@ -1,0 +1,66 @@
+.alert
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: transparent;
+    margin-bottom: 1rem;
+    padding: $alert-padding;
+    color: #FFFFFF;
+    border-radius: $alert-border-radius;
+
+    &-link
+    {
+        color: inherit;
+        font-weight: $font-bold;
+        border-bottom: $border;
+        border-color: inherit;
+    }
+
+    &-close
+    {
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        background-color: #FFFFFF;
+        min-width: rem(20px);
+        min-height: rem(20px);
+        width: rem(20px);
+        height: rem(20px);
+        max-width: rem(20px);
+        max-height: rem(20px);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:before, &:after
+        {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: block;
+            width: 0.5rem; //0.625rem
+            height: 0;
+            margin: auto;
+            border-top: $border get-color(foreground);
+            transform-origin: center center;
+            content: '';
+        }
+
+        &:before
+        {
+            transform: rotate(45deg);
+        }
+
+        &:after
+        {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @at-root
+    {
+        @include create-alert-variants(&);
+    }
+}

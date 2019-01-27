@@ -1,0 +1,11 @@
+@mixin create-sizes()
+{
+    @each $size, $value in $padding-sizes
+    {
+        &-#{$size}
+        {
+            padding: $value;
+            font-size: if($size == small, $font-size-small, $font-size-large);
+        }
+    }
+}

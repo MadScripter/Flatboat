@@ -1,0 +1,51 @@
+.tabs
+{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    ul
+    {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: $border get-color(light-gray);
+
+        .tab-item
+        {
+            display: block;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            
+            a
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: $padding-y $padding-x;
+                margin-bottom: rem(-2px);
+                color: get-color(foreground);
+                font-weight: $font-medium;
+                border-bottom: $border transparent;
+            }
+
+            &.selected
+            {
+                a
+                {
+                    color: get-variant-color(primary);
+                    border-color: get-variant-color(primary);
+                }
+            }
+        }
+    }
+}

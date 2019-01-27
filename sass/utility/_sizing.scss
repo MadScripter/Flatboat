@@ -1,0 +1,24 @@
+@for $i from 1 through 4
+{
+    $value: (25 * $i);
+
+    .width-#{$value}
+    {
+        width: ($value * 1%) !important;
+    }
+
+    .height-#{$value}
+    {
+        height: ($value * 1%) !important;
+    }
+}
+
+.max-width
+{
+    max-width: 100% !important;
+}
+
+.max-height
+{
+    max-height: 100% !important;
+}
