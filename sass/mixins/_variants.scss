@@ -8,7 +8,7 @@
 
             color: if($variant == light, get-color(foreground), #FFFFFF);
 
-            //mix-blend-mode: difference;
+            // mix-blend-mode: difference;
 
             @if($hover)
             {

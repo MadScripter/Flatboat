@@ -1,11 +1,3 @@
-//Colors
-//payne's grey: #5D737E
-//green sheen: #64B6AC
-//darker light gray: #CDD7D6
-//haya blue: #69DDFF
-//teal deer: #96E6B3
-//french sky blue: #65AFFF
-
 //========================================
 // C O L O R S
 //========================================
@@ -126,8 +118,8 @@ $badge-border-radius: $border-radius-small;
 // B A N N E R S
 //========================================
 
-$banner-gradientA: get-variant-color(info); //#FFF6B7;
-$banner-gradientB: get-variant-color(success); //#F6416C;
+$banner-gradientA: get-variant-color(info);
+$banner-gradientB: get-variant-color(success);
 $banner-text-color: get-color(foreground);
 
 $banner-margin: 1rem 0;
@@ -149,8 +141,8 @@ $banner-button-border-radius: rem(56px);
 // C A R D S
 //========================================
 
-$card-header-padding: 1rem /*1.5rem*/;
-//$card-content-padding: 0 1.5rem 1rem;
+$card-header-padding: 1rem;
+// $card-content-padding: 0 1.5rem 1rem;
 $card-content-padding: 1rem;
 $card-footer-item-padding: .75rem;
 

@@ -1,28 +1,17 @@
 {
-  "private": true,
   "name": "flatboat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
-    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
-    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "gulp build"
   },
   "author": "MadScripter",
-  "license": "ISC",
-  "dependencies": {
-    "flexboxgrid-sass": "^8.0.5",
-    "gridlex": "^2.3.1",
-    "include-media": "^1.4.9",
-    "mdi": "^1.9.33",
-    "normalize-scss": "^7.0.0",
-    "vue": "^2.3.4",
-    "vue-clickaway": "^2.1.0",
-    "vue-on-click-outside": "^1.0.3"
-  },
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "laravel-mix": "^0.12.1"
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
   }
 }
